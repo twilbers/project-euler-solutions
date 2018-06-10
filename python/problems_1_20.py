@@ -81,10 +81,10 @@ def p004(n=100, m=999):
     largestPalindrom(n,m) returns the largest palindrome that is the product of a pair of numbers that range between n and m.
     '''
     base_multiples = range(n, m+1)  # list of all three digit numbers
-    # This is a list comprehension of all palindromes that are the multiples of three digit numbers applied to set function to remove dublicates.
+# This is a list comprehension of all palindromes that are the multiples of three digit numbers applied to set function to remove dublicates.
     plaindrome_products = set(
         [n*m for (n, m) in itertools.combinations(base_multiples, 2) if isPalindrome(n*m)])
-    # max function returns largest member of set
+
     return max(plaindrome_products)
 
 
